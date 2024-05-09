@@ -1,0 +1,16 @@
+<!-- blog/templates/blog/question_posts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>question Posts</title>
+</head>
+<body>
+    <h1>question Posts</h1>
+    {% for post in posts %}
+        <h2><a href="{% url 'question_detail' question_id=post.id %}">{{ post.title }}</a></h2>
+        <p>{{ question.content }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

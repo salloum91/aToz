@@ -1,0 +1,16 @@
+<!-- blog/templates/blog/hadith_posts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hadith Posts</title>
+</head>
+<body>
+    <h1>Hadith Posts</h1>
+    {% for post in posts %}
+        <h2><a href="{% url 'hadith_detail' hadith_id=post.id %}">{{ post.title }}</a></h2>
+        <p>{{ post.content }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

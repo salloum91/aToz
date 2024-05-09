@@ -1,0 +1,16 @@
+<!-- blog/templates/blog/fatwa_posts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fatwa Posts</title>
+</head>
+<body>
+    <h1>Fatwa Posts</h1>
+    {% for post in posts %}
+        <h2><a href="{% url 'fatwa_detail' fatwa_id=post.id %}">{{ post.title }}</a></h2>
+        <p>{{ post.content }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
